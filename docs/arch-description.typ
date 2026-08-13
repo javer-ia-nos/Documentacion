@@ -1,6 +1,7 @@
 #set page(paper: "us-letter", numbering: "1", margin: (x: 2.5cm, y: 2.5cm))
-#set text(font: "Linux Libertine", size: 11pt, lang: "es")
+#set text(font: "Times New Roman", size: 11pt, lang: "es")
 #set heading(numbering: "1.1.")
+#import "@preview/datify:1.3.0": display-date
 
 // Función para resaltar las instrucciones que deben ser eliminadas
 #let instruction(body) = block(
@@ -16,18 +17,22 @@
 // --- Portada ---
 #align(center)[
   #v(4cm)
-  #text(size: 24pt, weight: "bold")[Descripción de la Arquitectura del Software (SAD)]
-  #v(1cm)
-  #text(size: 14pt)[Plantilla basada en el estándar arc42]
+  #text(size: 24pt, weight: "bold")[Sistema Bancario]
+  // #v(1cm)
+  // #text(size: 14pt)[Plantilla basada en el estándar arc42]
   #v(2cm)
   #text(size: 12pt)[
-    *Organización:* [Nombre de la Organización] \
-    *Fecha de entrega:* [Fecha] \
-    *Versión actual:* [Versión] \
-    *Autores:* [Nombres]
+    *Equipo:* Javer-IA-nos \
+    *Organización:* Pontificia Universidad Javeriana \
+    *Fecha de entrega:* #display-date(datetime.today()) \
+    *Versión actual:* v0.0.0 \ \
+    *Autores:* \ Miguel Francisco Vargas \
+    Sara Rodriguez Urueña \
+    Juliana Sofia Novoa Solano \
+    Salomon Alfredo Avila Larrotta \
+    Samuel Beltrán Martínez \
+    Arantxa Marian Espejo Malagon
   ]
-  #v(4cm)
-  #instruction[La primera página es la portada del documento. Incluye el título, la organización, la fecha de entrega, la versión actual, un logo que identifique a la organización y el nombre de los autores del documento. Tamaño: 1 página]
 ]
 
 #pagebreak()
