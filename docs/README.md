@@ -1,10 +1,10 @@
-= Documentos
+# Documentos
 
-== Instalación
+## Instalación
 
 Se debe instalar typst para compilar los pdfs, más no para editarlos. Se puede instalar [acá](https://typst.app/open-source/#download)
 
-== Generar Documentos
+## Generar Documentos
 
 ```sh
 typst compile arch-description.typ # generar el documento
