@@ -1,6 +1,7 @@
 #set page(paper: "us-letter", numbering: "1", margin: (x: 2.5cm, y: 2.5cm))
 #set text(font: "Times New Roman", size: 11pt, lang: "es")
 #set heading(numbering: "1.1.")
+#set par(justify: true)
 #import "@preview/datify:1.3.0": display-date
 
 // Función para resaltar las instrucciones que deben ser eliminadas
@@ -55,8 +56,8 @@
     stroke: 0.5pt + luma(200),
     fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
     [*Fecha*], [*Descripción del cambio*], [*Autor(es)*],
-    [2026-08-18], [Se añadieron los 30 casos de uso redactados y categorizados con aprobación por parte del docente], [Salomon Avila],
-    [2026-08-18], [Se adiciono una versión preliminar de la introduccion del documento], [Salomon Avila],
+    [2026-08-18], [Se incorporaron los 30 casos de uso categorizados y aprobados por el docente. Asimismo, se integró una versión preliminar de la introducción y la primera iteración del glosario del documento. Por ultimo, se realizo la primera iteración de los requisitos arquitectónicamente significativos], [Salomón Avila],
+
   )
 ]
 
@@ -82,13 +83,13 @@
   *Tamaño recomendado:* 1-2 páginas
 ]
 
-En la era digital contemporánea, la interacción entre los usuarios y las entidades financieras se ha consolidado principalmente a través de plataformas tecnológicas, las cuales se han convertido en el eje articulador de las operaciones cotidianas. En este contexto, el presente proyecto se orienta al diseño y desarrollo de un sistema bancario robusto, estructurado mediante módulos especializados en auditoría, gestión de relaciones con el cliente, administración de cuentas, productos financieros, notificaciones, seguridad, gestión de tarjetas y procesamiento de transacciones. El propósito fundamental de esta solución es facilitar a los usuarios la ejecución de sus actividades financieras dentro de un ecosistema seguro, intuitivo y eficiente.
+En la actualidad, las personas realizan sus operaciones financieras cotidianas a través de aplicaciones y plataformas digitales. Por ello, este proyecto consiste en diseñar y desarrollar un sistema bancario organizado en módulos especializados como auditoría, atención al cliente, cuentas, productos financieros, notificaciones, seguridad, tarjetas y transacciones para que los usuarios puedan gestionar su dinero de forma fácil y segura.
 
-La arquitectura propuesta ha sido concebida con un enfoque crítico hacia la calidad sistémica, priorizando la atención de atributos significativos indispensables para la operatividad bancaria. Entre estos, destaca la disponibilidad, cuya naturaleza exige una operatividad ininterrumpida que garantice la integridad transaccional frente a eventuales suspensiones del servicio. Asimismo, se ha enfatizado en el rendimiento y la desplegabilidad, asegurando que los tiempos de respuesta ante operaciones críticas sean óptimos y que los ciclos de despliegue de nuevas versiones sean eficaces, minimizando cualquier impacto en la disponibilidad del capital de los usuarios.
+Para lograrlo, la arquitectura del software se enfoca en cumplir con características clave de calidad que requiere un banco. En primer lugar, busca garantizar una alta disponibilidad para que el sistema nunca se detenga y las transacciones pendientes no queden inconclusas. También prioriza un buen rendimiento y una rápida desplegabilidad, de modo que las operaciones sean veloces y las actualizaciones de la plataforma se implementen sin afectar el servicio.
 
-La seguridad y la protección operativa constituyen pilares innegociables dentro de este diseño, fundamentados en la implementación de controles rigurosos sobre el acceso y la protección de datos, mitigando de forma preventiva cualquier riesgo de fraude o pérdida económica derivado de fallos técnicos. En paralelo, la arquitectura contempla una alta integrabilidad, permitiendo la interoperabilidad con billeteras digitales, redes interbancarias y sistemas de terceros mediante interfaces normalizadas. Finalmente, se ha priorizado la capacidad de modificación y la comprobabilidad, facilitando la escalabilidad funcional del sistema sin comprometer su estabilidad, y garantizando, a través de rigurosas pruebas de validación, que cada funcionalidad opere de manera aislada y correcta bajo estándares exigentes.
+Asimismo, la seguridad y la protección operativa son fundamentales para evitar pérdidas económicas por errores del sistema y para blindar la información de los clientes frente a fraudes. La arquitectura también permite una alta integrabilidad con billeteras digitales, cajeros y otros bancos. Por último, se facilita la modificación y la comprobabilidad, asegurando que se puedan añadir nuevas funciones sin alterar lo ya construido y que cada parte del sistema pueda probarse de forma aislada y rigurosa.
 
-Con el objetivo de consolidar una solución técnica coherente y documentada, el presente documento articula, en primera instancia, una visión exhaustiva de los requisitos funcionales del sistema. Posteriormente, se procede a la exposición del modelo de dominio, el análisis de los requisitos arquitectónicamente significativos, y el desarrollo de las vistas arquitectónicas pertinentes, culminando en la presentación de las decisiones técnicas y los riesgos asociados que fundamentan la solidez y sostenibilidad del sistema bancario propuesto.
+Para detallar todo esto, el documento presenta primero una visión general de los requisitos funcionales del sistema. A continuación, expone el modelo de dominio, los requerimientos arquitectónicos, las vistas de la arquitectura, las decisiones técnicas tomadas y los posibles riesgos para asegurar el éxito del proyecto.
 
 = Visión general de los requisitos funcionales
 
@@ -160,19 +161,10 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
 )
 
 = Requisitos Arquitectónicamente Significativos (ASR)
-#instruction[
-  Un Árbol de Utilidad, en formato tabular, que relacione los principales atributos de calidad con los requisitos funcionales, ordenados por prioridad. \
-  - La columna "ID ASR" debe contener un identificador único de cada requisito. \
-  - La columna "Atributo de calidad" debe señalar el atributo de calidad relevante para el ASR. Un mismo atributo puede formar parte de varios ASR. \
-  - La columna "Sub-atributo" debe señalar el sub-atributo de calidad relevante. \
-  - La columna "Funcionalidades" debe indicar los identificadores únicos de casos de uso, historias de usuario o requisitos funcionales relevantes. \
-  - La columna "Escenarios ASR" debe describir los escenarios relevantes de cada ASR. \
-  Si la tabla no es suficientemente ancha, cambie la orientación de la página a horizontal o use una hoja de cálculo anexa.
-]
 
 #set text(size: 9pt)
 #table(
-  columns: (auto, auto, auto, auto, 2fr, 2fr, auto),
+  columns: (auto, auto, auto, auto, auto, auto, auto),
   fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
   [*ID ASR*],
   [*Título del ASR*],
@@ -182,7 +174,53 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [*Escenarios ASR*],
   [*Prioridad*],
 
-  [], [], [], [], [], [], [],
+  [ASR-01],
+  [Disponibilidad Transaccional],
+  [Disponibilidad],
+  [Tolerancia a fallos],
+  [CU-11, CU-24, CU-26, CU-27, CU-30],
+  [Ante una interrupción imprevista de la red durante una transferencia internacional o de terceros, el sistema debe reintentar o asegurar la atomicidad de la transacción sin comprometer el saldo del usuario.],
+  [Alta],
+
+  [ASR-02],
+  [Rendimiento en Operaciones Críticas],
+  [Performance],
+  [Tiempo de respuesta],
+  [CU-11, CU-15, CU-25, CU-30],
+  [El procesamiento de pagos mediante códigos QR y transferencias entre cuentas debe completarse en un tiempo de respuesta inferior a 2 segundos bajo alta concurrencia de usuarios.],
+  [Alta],
+
+  [ASR-03],
+  [Seguridad y Protección contra Fraude],
+  [Security],
+  [Confidencialidad e Integridad],
+  [CU-01, CU-02, CU-15, CU-18, CU-19, CU-26],
+  [Un usuario no autorizado intenta acceder a la plataforma o vulnerar los controles de roles y doble factor; el sistema debe bloquear el acceso de forma inmediata y registrar el evento en auditoría.],
+  [Alta],
+
+  [ASR-04],
+  [Integrabilidad con Terceros y Billeteras],
+  [Integrability],
+  [Interoperabilidad],
+  [CU-12, CU-13, CU-27, CU-29],
+  [El sistema debe integrarse de manera fluida y estandarizada con plataformas externas como Apple Pay, Google Wallet y pasarelas de pagos internacionales mediante APIs seguras.],
+  [Alta],
+
+  [ASR-05],
+  [Modificabilidad y Gestión de Productos],
+  [Modifiability],
+  [Extensibilidad],
+  [CU-04, CU-05, CU-06, CU-07, CU-08, CU-21, CU-22],
+  [Ante el lanzamiento de una nueva regulación o tipo de producto de crédito/ahorro, los desarrolladores deben poder modificar o añadir la lógica del CRUD de cuentas y tarjetas sin alterar los módulos de transacciones.],
+  [Media],
+
+  [ASR-06],
+  [Testabilidad y Auditoría del Sistema],
+  [Testability],
+  [Aislamiento y Trazabilidad],
+  [CU-01, CU-04, CU-05, CU-14, CU-20, CU-24],
+  [El equipo de calidad debe poder aislar y probar unitariamente los módulos de cuentas, PQRS y registros de auditoría de sesiones para verificar el cumplimiento normativo.],
+  [Media],
 )
 #set text(size: 11pt)
 
@@ -268,9 +306,36 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
 #set text(size: 11pt)
 
 = Glosario
-#instruction[
-  Enumerar y describir todos los términos técnicos y del negocio que se hayan mencionado en el documento. Asuma que el lector puede ser técnico (sin conocimiento del dominio del problema) o no técnico (sin conocimiento de las tecnologías), por lo tanto, el glosario debe ser suficientemente amplio para satisfacer ambas audiencias.
-]
+
+Este glosario define los términos técnicos y de negocio utilizados a lo largo del documento, diseñados para facilitar la comprensión tanto de lectores con perfiles técnicos como de negocio.
+
+* **Arquitectura de software*: Estructura fundamental de un sistema informático, compuesta por sus elementos, las relaciones entre ellos y las propiedades de ambos, que sirve de base para su diseño y evolución futura.
+
+* **Atributo de calidad*: Característica no funcional que evalúa qué tan bien un sistema cumple con los requisitos operativos y de negocio, tales como la disponibilidad, la seguridad o el rendimiento.
+
+* **Auditoría*: Módulo o proceso encargado de registrar, rastrear y supervisar todas las actividades, transacciones e inicios de sesión realizados en el sistema para garantizar la trazabilidad y seguridad.
+
+* **Disponibilidad*: Atributo de calidad que mide la capacidad del sistema para mantenerse operativo y accesible de forma continua, asegurando que no se interrumpan transacciones en curso.
+
+* **Integrabilidad*: Capacidad del sistema para conectarse, comunicarse e intercambiar datos de forma fluida con plataformas externas, tales como billeteras digitales, cajeros automáticos u otras entidades bancarias.
+
+* **Modelo de dominio*: Representación conceptual de los objetos, entidades y reglas del mundo real dentro del negocio bancario (como cuentas, clientes, transacciones y tarjetas) que forman la lógica central del sistema.
+
+* **Módulo*: Componente o unidad lógica independiente dentro del sistema software que agrupa una serie de funcionalidades específicas y acotadas.
+
+* **Notificaciones*: Sistema automatizado encargado de enviar alertas instantáneas a los usuarios a través de canales como mensajes de texto, correos electrónicos o notificaciones emergentes sobre el estado de sus movimientos.
+
+* **Procesamiento de transacciones*: Mecanismo encargado de recibir, validar, ejecutar y registrar operaciones financieras (como transferencias o pagos) garantizando la consistencia y seguridad del dinero.
+
+* **Requisito funcional*: Descripción de un comportamiento, servicio o función específica que el sistema debe ser capaz de realizar bajo ciertas condiciones.
+
+* **Requisitos Arquitectónicamente Significativos (ASR)*: Requisitos del sistema que tienen un impacto directo y profundo en la estructura y diseño de la arquitectura de software.
+
+* **Seguridad y Protection Operativa (Safety)*: Conjunto de mecanismos orientados a proteger la información confidencial de los usuarios, controlar el acceso a las cuentas y prevenir pérdidas económicas o fraudes derivados de fallos en el sistema.
+
+* **Sistema bancario*: Plataforma tecnológica integral diseñada para gestionar cuentas, productos financieros, transacciones y servicios de atención a los clientes de una entidad financiera.
+
+* **Usabilidad*: Medida en la que el sistema y su interfaz gráfica permiten a los usuarios operar de manera intuitiva, rápida y sin fricciones técnicas.
 
 = Referencias
 #instruction[
