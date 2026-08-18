@@ -1,0 +1,65 @@
+<svg id="graph" width="380" height="760" viewBox="0 0 380 760" xmlns="http://www.w3.org/2000/svg"><script type="application/json"><![CDATA[{
+  "name": "SystemContext",
+  "description": "An example of a System Context diagram.",
+  "elements": [
+    {
+      "id": "122st75",
+      "tags": "Element,Software System,system",
+      "elementViewKey": "SystemContext"
+    },
+    {
+      "id": "1qbyk9e",
+      "tags": "Element,Person,person"
+    }
+  ],
+  "layout": {
+    "122st75": {
+      "x": 50,
+      "y": 500
+    },
+    "1qbyk9e": {
+      "x": 50,
+      "y": 50
+    },
+    "e-1t0pjo3": [
+      {
+        "x": 50,
+        "y": 200,
+        "auto": true
+      },
+      {
+        "x": 50,
+        "y": 260,
+        "auto": true
+      },
+      {
+        "x": 50,
+        "y": 270,
+        "label": true,
+        "auto": true
+      },
+      {
+        "x": 50,
+        "y": 340,
+        "auto": true
+      }
+    ]
+  }
+}]]></script>
+<defs>
+	<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="strokeWidth">
+		<path fill="context-stroke" stroke="none" d="M0,0 L10,5 L0,10 Z" class="arrowHead"></path>
+	</marker>
+	<g id="icon-circle" transform="translate(0,-12)" class="icon">
+		<circle cx="7" cy="7" r="7"></circle>
+	</g>
+	<g id="icon-cube" transform="translate(0, -14)" class="icon">
+		<path d="M 5 0 h 10 v 10 l -5 5 h -10 v -10 l 5 -5 M 0 5 h 10 v 10 M 15 0 l -5 5"></path>
+	</g>
+	<filter id="shadow">
+		<feDropShadow dx="3" dy="3" stdDeviation="5" flood-color="#00000030" flood-opacity="1"></feDropShadow>
+	</filter>
+</defs><g class="zoom" transform="scale(1) translate(140, 120)"><g class="groups"></g><g class="edges"><g class="edge selected" id="1t0pjo3" data-from="1qbyk9e" data-to="122st75"><rect x="12.7890625" y="231.5" rx="0" ry="0" width="74.421875" height="37" style="fill: none; stroke: none;"></rect><text x="0" y="231.5" text-anchor="middle" stroke="none" font-size="22" fill="#999" data-field="label" style="font-family: Arial, sans-serif; stroke: none;"><tspan x="50" dy="24px" font-size="22px" font-weight="normal">Uses</tspan></text><path marker-end="url(#arrow)" d="M50.00000000000001,170 L50,200 L50,231.5 L50,270 L50,340 L50.00000000000001,410" class="edge" fill="none" stroke="#999" stroke-width="3" stroke-linecap="round" stroke-dasharray="8"></path><circle id="v-1t0pjo3-a-165qs4r" cx="50" cy="200" r="7" fill="none" class="v-dot auto"></circle><circle id="v-1t0pjo3-a-9z9e9p" cx="50" cy="260" r="7" fill="none" class="v-dot auto"></circle><circle id="v-1t0pjo3-a-8b8mlw" cx="50" cy="270" r="7" fill="none" class="v-dot auto"></circle><circle id="v-1t0pjo3-a-1d7xhes" cx="50" cy="340" r="7" fill="none" class="v-dot auto"></circle></g></g><g class="nodes"><g class="node" id="122st75" transform="translate(50,500)"><rect rx="3" ry="3" x="-140" y="-90" width="280" height="180" class="nodeBorder" fill="var(--mdl-system-bg, #1168bd)" stroke="#999" stroke-width="3" opacity="0.9" style="filter: url(&quot;#shadow&quot;);"></rect><g transform="translate(0,-54)"><text x="0" y="0" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" data-field="name" style="font-family: Arial, sans-serif; stroke: none;"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">Software System</tspan></text><text x="0" y="54" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" font-size="16.5" style="font-family: Arial, sans-serif; stroke: none;">[system]</text><text x="0" y="72" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" data-field="description" style="font-family: Arial, sans-serif; stroke: none;"><tspan x="0" dy="18px" font-size="16px" font-weight="normal">My software system.</tspan></text></g></g><g class="node selected" id="1qbyk9e" transform="translate(50,50)" label-offset-y="96"><path d="M 106.4,80 A140,120 0,0,0 0 120
+		L25.454545454545453,240 L254.54545454545456,240 L280,120
+		A140,120 0,0,0 173.6 80 
+		A46.666666666666664,46.666666666666664 0,1,0 106.4 80" transform="translate(-140,-120)" class="nodeBorder" fill="var(--mdl-person-bg, #08427b)" stroke="#999" stroke-width="3" opacity="0.9" style="filter: url(&quot;#shadow&quot;);"></path><g transform="translate(0,-102)"><text x="0" y="96" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" data-field="name" style="font-family: Arial, sans-serif; stroke: none;"><tspan x="0" dy="24px" font-size="22px" font-weight="bold">User</tspan></text><text x="0" y="150" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" font-size="16.5" style="font-family: Arial, sans-serif; stroke: none;">[person]</text><text x="0" y="168" text-anchor="middle" fill="var(--mdl-system-color, #ffffff)" data-field="description" style="font-family: Arial, sans-serif; stroke: none;"><tspan x="0" dy="18px" font-size="16px" font-weight="normal">A user of my software system.</tspan></text></g></g></g></g></svg>
