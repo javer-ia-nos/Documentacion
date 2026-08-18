@@ -51,7 +51,7 @@
 
 #align(center)[
   #table(
-    columns: (1fr, 3fr, 2fr),
+    columns: (1fr, 3fr, 1fr),
     align: left,
     stroke: 0.5pt + luma(200),
     fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
