@@ -13,11 +13,11 @@ En windows agregar la carpeta de go al path, se debería poder ver con `go env G
 ## Compilar en web
 
 ```sh
-mdl serve diagramas/test -dir gen
+mdl serve diagrams/test -dir gen
 ```
 
 ## Generarlos a svg
 
 ```sh
-mdl svg diagramas/test -dir gen -all
+mdl svg diagrams/test -dir gen -all
 ```
