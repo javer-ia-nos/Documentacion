@@ -55,7 +55,8 @@
     stroke: 0.5pt + luma(200),
     fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
     [*Fecha*], [*Descripción del cambio*], [*Autor(es)*],
-    [YYYY-MM-DD], [Versión inicial], [Nombre],
+    [2026-08-18], [Se añadieron los 30 casos de uso redactados y categorizados con aprobación por parte del docente], [Salomon Avila],
+    [2026-08-18], [Se adiciono una versión preliminar de la introduccion del documento], [Salomon Avila],
   )
 ]
 
@@ -80,6 +81,14 @@
   - Cuáles son las principales secciones del documento y de qué trata cada una. \
   *Tamaño recomendado:* 1-2 páginas
 ]
+
+En la era digital contemporánea, la interacción entre los usuarios y las entidades financieras se ha consolidado principalmente a través de plataformas tecnológicas, las cuales se han convertido en el eje articulador de las operaciones cotidianas. En este contexto, el presente proyecto se orienta al diseño y desarrollo de un sistema bancario robusto, estructurado mediante módulos especializados en auditoría, gestión de relaciones con el cliente, administración de cuentas, productos financieros, notificaciones, seguridad, gestión de tarjetas y procesamiento de transacciones. El propósito fundamental de esta solución es facilitar a los usuarios la ejecución de sus actividades financieras dentro de un ecosistema seguro, intuitivo y eficiente.
+
+La arquitectura propuesta ha sido concebida con un enfoque crítico hacia la calidad sistémica, priorizando la atención de atributos significativos indispensables para la operatividad bancaria. Entre estos, destaca la disponibilidad, cuya naturaleza exige una operatividad ininterrumpida que garantice la integridad transaccional frente a eventuales suspensiones del servicio. Asimismo, se ha enfatizado en el rendimiento y la desplegabilidad, asegurando que los tiempos de respuesta ante operaciones críticas sean óptimos y que los ciclos de despliegue de nuevas versiones sean eficaces, minimizando cualquier impacto en la disponibilidad del capital de los usuarios.
+
+La seguridad y la protección operativa constituyen pilares innegociables dentro de este diseño, fundamentados en la implementación de controles rigurosos sobre el acceso y la protección de datos, mitigando de forma preventiva cualquier riesgo de fraude o pérdida económica derivado de fallos técnicos. En paralelo, la arquitectura contempla una alta integrabilidad, permitiendo la interoperabilidad con billeteras digitales, redes interbancarias y sistemas de terceros mediante interfaces normalizadas. Finalmente, se ha priorizado la capacidad de modificación y la comprobabilidad, facilitando la escalabilidad funcional del sistema sin comprometer su estabilidad, y garantizando, a través de rigurosas pruebas de validación, que cada funcionalidad opere de manera aislada y correcta bajo estándares exigentes.
+
+Con el objetivo de consolidar una solución técnica coherente y documentada, el presente documento articula, en primera instancia, una visión exhaustiva de los requisitos funcionales del sistema. Posteriormente, se procede a la exposición del modelo de dominio, el análisis de los requisitos arquitectónicamente significativos, y el desarrollo de las vistas arquitectónicas pertinentes, culminando en la presentación de las decisiones técnicas y los riesgos asociados que fundamentan la solidez y sostenibilidad del sistema bancario propuesto.
 
 = Visión general de los requisitos funcionales
 
