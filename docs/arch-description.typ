@@ -82,10 +82,46 @@
 ]
 
 = Visión general de los requisitos funcionales
-#instruction[
-  Descripción general de los requisitos funcionales del sistema. Debe resumir los contenidos del SRS. Todos los requisitos deben tener un identificador único para poder ser referenciados en secciones posteriores. \
-  *Tamaño recomendado:* 1-2 páginas
-]
+
+A continuación se detallan los 30 casos de uso funcionales del sistema bancario, estructurados de forma modular y con identificadores únicos, desglosando componentes clave como cuentas, tarjetas, canales de atención y seguridad:
+
+#table(
+  columns: (auto, auto, auto, auto), 
+  stroke: 0.5pt + gray,
+  fill: (x, y) => if y == 0 { luma(230) },
+  table.header([*ID*], [*Caso de Uso*], [*Descripción Detallada*], [*Categoría*]),
+  
+  [CU-01], [*Autenticación de usuarios*], [Acceso al sistema mediante credenciales.], [Seguridad],
+  [CU-02], [*Autorización y control de roles*], [Verificación de permisos según el perfil del usuario autenticado.], [Seguridad],
+  [CU-03], [*Gestión de dispositivos confiables*], [Registro, consulta y revocación de dispositivos seguros autorizados.], [Seguridad],
+  [CU-04], [*Gestión de cuentas de ahorros (CRUD)*], [Apertura, modificación, consulta y cancelación de cuentas de ahorros.], [Cuentas],
+  [CU-05], [*Gestión de cuentas corrientes (CRUD)*], [Apertura, modificación, consulta y cancelación de cuentas corrientes.], [Cuentas],
+  [CU-06], [*Gestión de subcuentas*], [Permitir al usuario separar dinero del saldo disponible en subcuentas de ahorro.], [Cuentas],
+  [CU-07], [*Emisión y gestión de tarjetas de crédito*], [Solicitud, activación y configuración de tarjetas de crédito.], [Tarjetas],
+  [CU-08], [*Emisión y gestión de tarjetas de débito*], [Solicitud, activación y configuración de tarjetas de débito.], [Tarjetas],
+  [CU-09], [*Realización de avances de tarjeta de crédito*], [Desembolso de efectivo a partir del cupo de la tarjeta de crédito.], [Tarjetas],
+  [CU-10], [*Bloqueo y desbloqueo de tarjetas*], [Inhabilitación temporal o definitiva de tarjetas en caso de robo o pérdida.], [Tarjetas],
+  [CU-11], [*Transferencias entre cuentas propias y a terceros*], [Envío de fondos entre cuentas del mismo banco o cuentas interbancarias.], [Transacciones],
+  [CU-12], [*Gestión de transferencias internacionales*], [Envío y recepción de fondos hacia o desde el exterior.], [Transacciones],
+  [CU-13], [*Pago de facturas de servicios*], [Cancelación de servicios públicos y privados mediante convenios registrados.], [Transacciones],
+  [CU-14], [*Pagos físicos y transacciones presenciales*], [Gestión de cheques y consignaciones en ventanilla o canales físicos.], [Transacciones],
+  [CU-15], [*Generación y escaneo de códigos QR*], [Cobros y pagos inmediatos mediante códigos QR.], [Transacciones],
+  [CU-16], [*Administración de pagos automáticos*], [Configuración de débitos programados y cobros periódicos automáticos.], [Transacciones],
+  [CU-17], [*Límites y permisos de transacciones*], [Establecimiento de topes máximos diarios y por operación.], [Seguridad],
+  [CU-18], [*Consulta de saldo y movimientos*], [Visualización en tiempo real del saldo disponible y extractos detallados.], [Financiero],
+  [CU-19], [*Solicitud de CDT e inversiones*], [Creación de certificados de depósito a término y consulta de rendimientos.], [Financiero],
+  [CU-20], [*Historial de actividad y sesiones*], [Auditoría de inicios de sesión y registros de actividad de la cuenta.], [Auditoría],
+  [CU-21], [*Solicitud y gestión de préstamos*], [Aprobación, seguimiento y amortización de créditos bancarios.], [Financiero],
+  [CU-22], [*Gestión de beneficiarios (CRM)*], [Registro, actualización y administración de contactos frecuentes para transferencias.], [CRM],
+  [CU-23], [*Chat de atención al cliente*], [Soporte interactivo en línea para resolución de dudas.], [CRM],
+  [CU-24], [*Gestión de solicitudes PQRS*], [Radicación y seguimiento de Peticiones, Quejas, Reclamos y Solicitudes.], [CRM],
+  [CU-25], [*Reclamaciones por transacciones*], [Revisión y disputas por transacciones no reconocidas o fraudulentas.], [CRM],
+  [CU-26], [*Gestión de seguridad de la cuenta*], [Cambio de claves, segundo factor y políticas de protección contra fraude.], [Seguridad],
+  [CU-27], [*Certificados bancarios*], [Generación automatizada de certificados de cuentas y productos.], [Financiero],
+  [CU-28], [*Notificaciones de movimientos*], [Envío de alertas instantáneas vía push, SMS o correo por cualquier tipo de transacción.], [Notificaciones],
+  [CU-29], [*Soporte para billeteras externas*], [Vinculación de tarjetas a plataformas como Apple Pay o Google Wallet.], [Transacciones],
+  [CU-30], [*Programación de ahorro automático*], [Automatización de transferencias periódicas hacia metas o subcuentas de ahorro.], [Cuentas],
+)
 
 = Modelo de dominio
 #instruction[
