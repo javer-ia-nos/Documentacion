@@ -33,7 +33,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          name: "${{ github.ref_name }} — ${{ env.DATE }}"
+          name: "${{ github.ref_name }}"
           files: |
             docs/bitacora.pdf
             docs/arch-description.pdf
