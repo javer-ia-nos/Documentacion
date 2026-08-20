@@ -14,3 +14,11 @@
   - Se realizo la definición y categorización final de los casos de uso.
   - Se implemento un test original de los creadores de la libreria para aprender su uso.
   - Se hizo la configuración para el uso de la libreria #link("https://github.com/goadesign/model/tree/main/examples/nested", "goa/model").
+
+= Bitacoras personales
+#include "bitacoras-personales/acha.typ"
+#include "bitacoras-personales/arantxa.typ"
+#include "bitacoras-personales/jules.typ"
+#include "bitacoras-personales/salomon.typ"
+#include "bitacoras-personales/samuel.typ"
+#include "bitacoras-personales/sara.typ"
