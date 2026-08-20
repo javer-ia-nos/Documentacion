@@ -15,6 +15,11 @@
   ],
 )
 
+#set table(
+  stroke: 0.5pt + gray,
+  fill: (col, row) => if row == 0 { luma(230) } else { none },
+)
+
 // --- Portada ---
 #align(center)[
   #v(4cm)
@@ -96,10 +101,9 @@ Para detallar todo esto, el documento presenta primero una visión general de lo
 
 A continuación se detallan los 30 casos de uso funcionales del sistema bancario, estructurados de forma modular y con identificadores únicos, desglosando componentes clave como cuentas, tarjetas, canales de atención y seguridad:
 
+#set text(size: 7pt)
 #table(
   columns: (auto, auto, auto, auto, auto),
-  stroke: 0.5pt + gray,
-  fill: (col, row) => if row == 0 { luma(230) } else { none },
   table.header([*ID*], [*Caso de Uso*], [*Descripción Detallada*], [*Categoría*], [*Asignado a*]),
 
   [CU-01],
@@ -283,6 +287,8 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [Salomon Alfredo Avila Larrotta],
 )
 
+#set text(size: 7pt)
+
 = Modelo de dominio
 #instruction[
   Diagrama que muestra los principales conceptos del sistema y sus relaciones. \
@@ -315,7 +321,6 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
 #set text(size: 7pt)
 #table(
   columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-  fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
   [*ID ASR*],
   [*Título del ASR*],
   [*Atributo de calidad*],
