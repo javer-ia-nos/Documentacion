@@ -1,3 +1,32 @@
+#import "@preview/datify:1.3.0": display-date
+#set page(paper: "us-letter", numbering: "1", margin: (x: 2.5cm, y: 2.5cm))
+#set text(font: "Times New Roman", size: 11pt, lang: "es")
+#set heading(numbering: "1.1.")
+#set par(justify: true)
+#let version = sys.inputs.at("version", default: "No asignada")
+
+#align(center)[
+  #v(4cm)
+  #text(size: 24pt, weight: "bold")[Bitacora Grupal]
+  // #v(1cm)
+  // #text(size: 14pt)[Plantilla basada en el estándar arc42]
+  #v(2cm)
+  #text(size: 12pt)[
+    *Equipo:* Javer-IA-nos \
+    *Organización:* Pontificia Universidad Javeriana \
+    *Fecha de entrega:* #display-date(datetime.today()) \
+    *Versión actual:* #version \ \
+    *Autores:* \ Miguel Francisco Vargas \
+    Sara Rodriguez Urueña \
+    Juliana Sofia Novoa Solano \
+    Salomon Alfredo Avila Larrotta \
+    Samuel Beltrán Martínez \
+    Arantxa Marian Espejo Malagon
+  ]
+]
+
+#pagebreak()
+
 = Bitácora Arquitectónica
 
 #table(

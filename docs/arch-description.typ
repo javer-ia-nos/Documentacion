@@ -4,6 +4,8 @@
 #set par(justify: true)
 #import "@preview/datify:1.3.0": display-date
 
+#let version = sys.inputs.at("version", default: "No asignada")
+
 // Función para resaltar las instrucciones que deben ser eliminadas
 #let instruction(body) = block(
   fill: rgb("e6f2ff"),
@@ -31,7 +33,7 @@
     *Equipo:* Javer-IA-nos \
     *Organización:* Pontificia Universidad Javeriana \
     *Fecha de entrega:* #display-date(datetime.today()) \
-    *Versión actual:* v0.0.0 \ \
+    *Versión actual:* #version \ \
     *Autores:* \ Miguel Francisco Vargas \
     Sara Rodriguez Urueña \
     Juliana Sofia Novoa Solano \
