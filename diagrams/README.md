@@ -31,8 +31,16 @@ mdl svg diagrams/test -dir gen -all
 
 En mac o linux debería servir esto:
 
+#### ZSH
 ```sh
 echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+#### Bash (generalmente ubuntu recién instalado)
+```sh
+echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 En windows agregar la carpeta de go al path, se debería poder ver con `go env GOPATH`.
