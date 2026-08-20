@@ -97,144 +97,190 @@ Para detallar todo esto, el documento presenta primero una visión general de lo
 A continuación se detallan los 30 casos de uso funcionales del sistema bancario, estructurados de forma modular y con identificadores únicos, desglosando componentes clave como cuentas, tarjetas, canales de atención y seguridad:
 
 #table(
-  columns: (auto, auto, auto, auto),
+  columns: (auto, auto, auto, auto, auto),
   stroke: 0.5pt + gray,
-  fill: (x, y) => if y == 0 { luma(230) },
-  table.header([*ID*], [*Caso de Uso*], [*Descripción Detallada*], [*Categoría*]),
+  fill: (col, row) => if row == 0 { luma(230) } else { none },
+  table.header([*ID*], [*Caso de Uso*], [*Descripción Detallada*], [*Categoría*], [*Asignado a*]),
 
   [CU-01],
   [*Historial de actividad y sesiones*],
   [Auditoría de inicios de sesión y registros de actividad de la cuenta.],
   [Auditoría],
+  [Arantxa Marian Espejo Malagon],
 
-  [CU-02], [*Chat de atención al cliente*], [Soporte interactivo en línea para resolución de dudas.], [CRM],
+  [CU-02],
+  [*Chat de atención al cliente*],
+  [Soporte interactivo en línea para resolución de dudas.],
+  [CRM],
+  [Juliana Sofia Novoa Solano],
+
   [CU-03],
   [*Gestión de beneficiarios (CRM)*],
   [Registro, actualización y administración de contactos frecuentes para transferencias.],
   [CRM],
+  [Miguel Francisco Vargas],
 
   [CU-04],
   [*Gestión de solicitudes PQRS*],
   [Radicación y seguimiento de Peticiones, Quejas, Reclamos y Solicitudes.],
   [CRM],
+  [Juliana Sofia Novoa Solano],
 
   [CU-05],
   [*Reclamaciones por transacciones*],
   [Revisión y disputas por transacciones no reconocidas o fraudulentas.],
   [CRM],
+  [Juliana Sofia Novoa Solano],
 
   [CU-06],
   [*Gestión de cuentas corrientes (CRUD)*],
   [Apertura, modificación, consulta y cancelación de cuentas corrientes.],
   [Cuentas],
+  [Sara Rodriguez Urueña],
 
   [CU-07],
   [*Gestión de cuentas de ahorros (CRUD)*],
   [Apertura, modificación, consulta y cancelación de cuentas de ahorros.],
   [Cuentas],
+  [Sara Rodriguez Urueña],
 
   [CU-08],
   [*Gestión de subcuentas*],
   [Permitir al usuario separar dinero del saldo disponible en subcuentas de ahorro.],
   [Cuentas],
+  [Sara Rodriguez Urueña],
 
   [CU-09],
   [*Programación de ahorro automático*],
   [Automatización de transferencias periódicas hacia metas o subcuentas de ahorro.],
   [Cuentas],
+  [Miguel Francisco Vargas],
 
-  [CU-10], [*Certificados bancarios*], [Generación automatizada de certificados de cuentas y productos.], [Financiero],
+  [CU-10],
+  [*Certificados bancarios*],
+  [Generación automatizada de certificados de cuentas y productos.],
+  [Financiero],
+  [Samuel Beltrán Martínez],
+
   [CU-11],
   [*Consulta de saldo y movimientos*],
   [Visualización en tiempo real del saldo disponible y extractos detallados.],
   [Financiero],
+  [Miguel Francisco Vargas],
 
   [CU-12],
   [*Solicitud de CDT e inversiones*],
   [Creación de certificados de depósito a término y consulta de rendimientos.],
   [Financiero],
+  [Samuel Beltrán Martínez],
 
   [CU-13],
   [*Solicitud y gestión de préstamos*],
   [Aprobación, seguimiento y amortización de créditos bancarios.],
   [Financiero],
+  [Samuel Beltrán Martínez],
 
   [CU-14],
   [*Notificaciones de movimientos*],
   [Envío de alertas instantáneas vía push, SMS o correo por cualquier tipo de transacción.],
   [Notificaciones],
+  [Juliana Sofia Novoa Solano],
 
-  [CU-15], [*Autenticación de usuarios*], [Acceso al sistema mediante credenciales.], [Seguridad],
+  [CU-15],
+  [*Autenticación de usuarios*],
+  [Acceso al sistema mediante credenciales.],
+  [Seguridad],
+  [Arantxa Marian Espejo Malagon],
+
   [CU-16],
   [*Autorización y control de roles*],
   [Verificación de permisos según el perfil del usuario autenticado.],
   [Seguridad],
+  [Arantxa Marian Espejo Malagon],
 
   [CU-17],
   [*Gestión de dispositivos confiables*],
   [Registro, consulta y revocación de dispositivos seguros autorizados.],
   [Seguridad],
+  [Salomon Alfredo Avila Larrotta],
 
   [CU-18],
   [*Gestión de seguridad de la cuenta*],
   [Cambio de claves, segundo factor y políticas de protección contra fraude.],
   [Seguridad],
+  [Arantxa Marian Espejo Malagon],
 
   [CU-19],
   [*Límites y permisos de transacciones*],
   [Establecimiento de topes máximos diarios y por operación.],
   [Seguridad],
+  [Arantxa Marian Espejo Malagon],
 
   [CU-20],
   [*Bloqueo y desbloqueo de tarjetas*],
   [Inhabilitación temporal o definitiva de tarjetas en caso de robo o pérdida.],
   [Tarjetas],
+  [Juliana Sofia Novoa Solano],
 
   [CU-21],
   [*Emisión y gestión de tarjetas de crédito*],
   [Solicitud, activación y configuración de tarjetas de crédito.],
   [Tarjetas],
+  [Sara Rodriguez Urueña],
 
   [CU-22],
   [*Emisión y gestión de tarjetas de débito*],
   [Solicitud, activación y configuración de tarjetas de débito.],
   [Tarjetas],
+  [Sara Rodriguez Urueña],
 
   [CU-23],
   [*Realización de avances de tarjeta de crédito*],
   [Desembolso de efectivo a partir del cupo de la tarjeta de crédito.],
   [Tarjetas],
+  [Miguel Francisco Vargas],
 
   [CU-24],
   [*Administración de pagos automáticos*],
   [Configuración de débitos programados y cobros periódicos automáticos.],
   [Transacciones],
+  [Salomon Alfredo Avila Larrotta],
 
-  [CU-25], [*Generación y escaneo de códigos QR*], [Cobros y pagos inmediatos mediante códigos QR.], [Transacciones],
+  [CU-25],
+  [*Generación y escaneo de códigos QR*],
+  [Cobros y pagos inmediatos mediante códigos QR.],
+  [Transacciones],
+  [Miguel Francisco Vargas],
+
   [CU-26],
   [*Gestión de transferencias internacionales*],
   [Envío y recepción de fondos hacia o desde el exterior.],
   [Transacciones],
+  [Salomon Alfredo Avila Larrotta],
 
   [CU-27],
   [*Pago de facturas de servicios*],
   [Cancelación de servicios públicos y privados mediante convenios registrados.],
   [Transacciones],
+  [Samuel Beltrán Martínez],
 
   [CU-28],
   [*Pagos físicos y transacciones presenciales*],
   [Gestión de cheques y consignaciones en ventanilla o canales físicos.],
   [Transacciones],
+  [Salomon Alfredo Avila Larrotta],
 
   [CU-29],
   [*Soporte para billeteras externas*],
   [Vinculación de tarjetas a plataformas como Apple Pay o Google Wallet.],
   [Transacciones],
+  [Samuel Beltrán Martínez],
 
   [CU-30],
   [*Transferencias entre cuentas propias y a terceros*],
   [Envío de fondos entre cuentas del mismo banco o cuentas interbancarias.],
   [Transacciones],
+  [Salomon Alfredo Avila Larrotta],
 )
 
 = Modelo de dominio
@@ -266,7 +312,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
 
 = Requisitos Arquitectónicamente Significativos (ASR)
 
-#set text(size: 9pt)
+#set text(size: 7pt)
 #table(
   columns: (auto, auto, auto, auto, auto, auto, auto, auto),
   fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
