@@ -268,7 +268,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
 
 #set text(size: 9pt)
 #table(
-  columns: (auto, auto, auto, auto, auto, auto, auto),
+  columns: (auto, auto, auto, auto, auto, auto, auto, auto),
   fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
   [*ID ASR*],
   [*Título del ASR*],
@@ -277,6 +277,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [*Funcionalidades*],
   [*Escenarios ASR*],
   [*Prioridad*],
+  [*Asignado a*],
 
   [ASR-01],
   [Disponibilidad Transaccional],
@@ -285,6 +286,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-11, CU-24, CU-26, CU-27, CU-30],
   [Ante una interrupción imprevista de la red durante una transferencia internacional o de terceros, el sistema debe reintentar o asegurar la atomicidad de la transacción sin comprometer el saldo del usuario.],
   [Alta],
+  [Salomon Alfredo Avila Larrotta],
 
   [ASR-02],
   [Rendimiento en Operaciones Críticas],
@@ -293,6 +295,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-11, CU-15, CU-25, CU-30],
   [El procesamiento de pagos mediante códigos QR y transferencias entre cuentas debe completarse en un tiempo de respuesta inferior a 2 segundos bajo alta concurrencia de usuarios.],
   [Alta],
+  [Miguel Francisco Vargas],
 
   [ASR-03],
   [Seguridad y Protección contra Fraude],
@@ -301,6 +304,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-01, CU-02, CU-15, CU-18, CU-19, CU-26],
   [Un usuario no autorizado intenta acceder a la plataforma o vulnerar los controles de roles y doble factor; el sistema debe bloquear el acceso de forma inmediata y registrar el evento en auditoría.],
   [Alta],
+  [Arantxa Marian Espejo Malagon],
 
   [ASR-04],
   [Integrabilidad con Terceros y Billeteras],
@@ -309,6 +313,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-12, CU-13, CU-27, CU-29],
   [El sistema debe integrarse de manera fluida y estandarizada con plataformas externas como Apple Pay, Google Wallet y pasarelas de pagos internacionales mediante APIs seguras.],
   [Alta],
+  [Samuel Beltrán Martínez],
 
   [ASR-05],
   [Modificabilidad y Gestión de Productos],
@@ -317,6 +322,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-04, CU-05, CU-06, CU-07, CU-08, CU-21, CU-22],
   [Ante el lanzamiento de una nueva regulación o tipo de producto de crédito/ahorro, los desarrolladores deben poder modificar o añadir la lógica del CRUD de cuentas y tarjetas sin alterar los módulos de transacciones.],
   [Media],
+  [Sara Rodriguez Urueña],
 
   [ASR-06],
   [Testabilidad y Auditoría del Sistema],
@@ -325,6 +331,7 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   [CU-01, CU-04, CU-05, CU-14, CU-20, CU-24],
   [El equipo de calidad debe poder aislar y probar unitariamente los módulos de cuentas, PQRS y registros de auditoría de sesiones para verificar el cumplimiento normativo.],
   [Media],
+  [Juliana Sofia Novoa Solano],
 )
 #set text(size: 11pt)
 
