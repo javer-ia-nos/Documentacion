@@ -65,9 +65,9 @@
 #pagebreak()
 
 #outline(title: [Tabla de Contenidos], depth: 3, indent: auto)
-#instruction[
-  *Propósito:* Encontrar rápidamente una sección específica del documento. El resumen, y las listas de figuras y tablas no se incluyen en esta sección. La tabla de contenidos comienza en la Introducción, que es la página uno del documento.
-]
+// #instruction[
+//   *Propósito:* Encontrar rápidamente una sección específica del documento. El resumen, y las listas de figuras y tablas no se incluyen en esta sección. La tabla de contenidos comienza en la Introducción, que es la página uno del documento.
+// ]
 
 #pagebreak()
 #set page(numbering: "1")
