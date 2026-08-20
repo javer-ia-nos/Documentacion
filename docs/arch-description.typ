@@ -38,10 +38,10 @@
 
 #pagebreak()
 
-#instruction[
-  Esta plantilla está basada en el estándar arc42 https://arc42.org/overview \
-  A continuación, encontrará las secciones requeridas para su entrega del documento de Descripción de la Arquitectura del Software. Todos los párrafos del color de este texto son las instrucciones para completar cada sección. Deben ser removidos del documento a entregar.
-]
+// #instruction[
+//   Esta plantilla está basada en el estándar arc42 https://arc42.org/overview \
+//   A continuación, encontrará las secciones requeridas para su entrega del documento de Descripción de la Arquitectura del Software. Todos los párrafos del color de este texto son las instrucciones para completar cada sección. Deben ser removidos del documento a entregar.
+// ]
 
 = Historial de Cambios
 #instruction[
@@ -56,8 +56,9 @@
     stroke: 0.5pt + luma(200),
     fill: (col, row) => if row == 0 { rgb("f0f0f0") } else { none },
     [*Fecha*], [*Descripción del cambio*], [*Autor(es)*],
-    [2026-08-18], [Se incorporaron los 30 casos de uso categorizados y aprobados por el docente. Asimismo, se integró una versión preliminar de la introducción y la primera iteración del glosario del documento. Por ultimo, se realizo la primera iteración de los requisitos arquitectónicamente significativos], [Salomón Avila],
-
+    [2026-08-18],
+    [Se incorporaron los 30 casos de uso categorizados y aprobados por el docente. Asimismo, se integró una versión preliminar de la introducción y la primera iteración del glosario del documento. Por ultimo, se realizo la primera iteración de los requisitos arquitectónicamente significativos],
+    [Salomón Avila],
   )
 ]
 
@@ -100,37 +101,140 @@ A continuación se detallan los 30 casos de uso funcionales del sistema bancario
   stroke: 0.5pt + gray,
   fill: (x, y) => if y == 0 { luma(230) },
   table.header([*ID*], [*Caso de Uso*], [*Descripción Detallada*], [*Categoría*]),
-  
-  [CU-01], [*Historial de actividad y sesiones*], [Auditoría de inicios de sesión y registros de actividad de la cuenta.], [Auditoría],
+
+  [CU-01],
+  [*Historial de actividad y sesiones*],
+  [Auditoría de inicios de sesión y registros de actividad de la cuenta.],
+  [Auditoría],
+
   [CU-02], [*Chat de atención al cliente*], [Soporte interactivo en línea para resolución de dudas.], [CRM],
-  [CU-03], [*Gestión de beneficiarios (CRM)*], [Registro, actualización y administración de contactos frecuentes para transferencias.], [CRM],
-  [CU-04], [*Gestión de solicitudes PQRS*], [Radicación y seguimiento de Peticiones, Quejas, Reclamos y Solicitudes.], [CRM],
-  [CU-05], [*Reclamaciones por transacciones*], [Revisión y disputas por transacciones no reconocidas o fraudulentas.], [CRM],
-  [CU-06], [*Gestión de cuentas corrientes (CRUD)*], [Apertura, modificación, consulta y cancelación de cuentas corrientes.], [Cuentas],
-  [CU-07], [*Gestión de cuentas de ahorros (CRUD)*], [Apertura, modificación, consulta y cancelación de cuentas de ahorros.], [Cuentas],
-  [CU-08], [*Gestión de subcuentas*], [Permitir al usuario separar dinero del saldo disponible en subcuentas de ahorro.], [Cuentas],
-  [CU-09], [*Programación de ahorro automático*], [Automatización de transferencias periódicas hacia metas o subcuentas de ahorro.], [Cuentas],
+  [CU-03],
+  [*Gestión de beneficiarios (CRM)*],
+  [Registro, actualización y administración de contactos frecuentes para transferencias.],
+  [CRM],
+
+  [CU-04],
+  [*Gestión de solicitudes PQRS*],
+  [Radicación y seguimiento de Peticiones, Quejas, Reclamos y Solicitudes.],
+  [CRM],
+
+  [CU-05],
+  [*Reclamaciones por transacciones*],
+  [Revisión y disputas por transacciones no reconocidas o fraudulentas.],
+  [CRM],
+
+  [CU-06],
+  [*Gestión de cuentas corrientes (CRUD)*],
+  [Apertura, modificación, consulta y cancelación de cuentas corrientes.],
+  [Cuentas],
+
+  [CU-07],
+  [*Gestión de cuentas de ahorros (CRUD)*],
+  [Apertura, modificación, consulta y cancelación de cuentas de ahorros.],
+  [Cuentas],
+
+  [CU-08],
+  [*Gestión de subcuentas*],
+  [Permitir al usuario separar dinero del saldo disponible en subcuentas de ahorro.],
+  [Cuentas],
+
+  [CU-09],
+  [*Programación de ahorro automático*],
+  [Automatización de transferencias periódicas hacia metas o subcuentas de ahorro.],
+  [Cuentas],
+
   [CU-10], [*Certificados bancarios*], [Generación automatizada de certificados de cuentas y productos.], [Financiero],
-  [CU-11], [*Consulta de saldo y movimientos*], [Visualización en tiempo real del saldo disponible y extractos detallados.], [Financiero],
-  [CU-12], [*Solicitud de CDT e inversiones*], [Creación de certificados de depósito a término y consulta de rendimientos.], [Financiero],
-  [CU-13], [*Solicitud y gestión de préstamos*], [Aprobación, seguimiento y amortización de créditos bancarios.], [Financiero],
-  [CU-14], [*Notificaciones de movimientos*], [Envío de alertas instantáneas vía push, SMS o correo por cualquier tipo de transacción.], [Notificaciones],
+  [CU-11],
+  [*Consulta de saldo y movimientos*],
+  [Visualización en tiempo real del saldo disponible y extractos detallados.],
+  [Financiero],
+
+  [CU-12],
+  [*Solicitud de CDT e inversiones*],
+  [Creación de certificados de depósito a término y consulta de rendimientos.],
+  [Financiero],
+
+  [CU-13],
+  [*Solicitud y gestión de préstamos*],
+  [Aprobación, seguimiento y amortización de créditos bancarios.],
+  [Financiero],
+
+  [CU-14],
+  [*Notificaciones de movimientos*],
+  [Envío de alertas instantáneas vía push, SMS o correo por cualquier tipo de transacción.],
+  [Notificaciones],
+
   [CU-15], [*Autenticación de usuarios*], [Acceso al sistema mediante credenciales.], [Seguridad],
-  [CU-16], [*Autorización y control de roles*], [Verificación de permisos según el perfil del usuario autenticado.], [Seguridad],
-  [CU-17], [*Gestión de dispositivos confiables*], [Registro, consulta y revocación de dispositivos seguros autorizados.], [Seguridad],
-  [CU-18], [*Gestión de seguridad de la cuenta*], [Cambio de claves, segundo factor y políticas de protección contra fraude.], [Seguridad],
-  [CU-19], [*Límites y permisos de transacciones*], [Establecimiento de topes máximos diarios y por operación.], [Seguridad],
-  [CU-20], [*Bloqueo y desbloqueo de tarjetas*], [Inhabilitación temporal o definitiva de tarjetas en caso de robo o pérdida.], [Tarjetas],
-  [CU-21], [*Emisión y gestión de tarjetas de crédito*], [Solicitud, activación y configuración de tarjetas de crédito.], [Tarjetas],
-  [CU-22], [*Emisión y gestión de tarjetas de débito*], [Solicitud, activación y configuración de tarjetas de débito.], [Tarjetas],
-  [CU-23], [*Realización de avances de tarjeta de crédito*], [Desembolso de efectivo a partir del cupo de la tarjeta de crédito.], [Tarjetas],
-  [CU-24], [*Administración de pagos automáticos*], [Configuración de débitos programados y cobros periódicos automáticos.], [Transacciones],
+  [CU-16],
+  [*Autorización y control de roles*],
+  [Verificación de permisos según el perfil del usuario autenticado.],
+  [Seguridad],
+
+  [CU-17],
+  [*Gestión de dispositivos confiables*],
+  [Registro, consulta y revocación de dispositivos seguros autorizados.],
+  [Seguridad],
+
+  [CU-18],
+  [*Gestión de seguridad de la cuenta*],
+  [Cambio de claves, segundo factor y políticas de protección contra fraude.],
+  [Seguridad],
+
+  [CU-19],
+  [*Límites y permisos de transacciones*],
+  [Establecimiento de topes máximos diarios y por operación.],
+  [Seguridad],
+
+  [CU-20],
+  [*Bloqueo y desbloqueo de tarjetas*],
+  [Inhabilitación temporal o definitiva de tarjetas en caso de robo o pérdida.],
+  [Tarjetas],
+
+  [CU-21],
+  [*Emisión y gestión de tarjetas de crédito*],
+  [Solicitud, activación y configuración de tarjetas de crédito.],
+  [Tarjetas],
+
+  [CU-22],
+  [*Emisión y gestión de tarjetas de débito*],
+  [Solicitud, activación y configuración de tarjetas de débito.],
+  [Tarjetas],
+
+  [CU-23],
+  [*Realización de avances de tarjeta de crédito*],
+  [Desembolso de efectivo a partir del cupo de la tarjeta de crédito.],
+  [Tarjetas],
+
+  [CU-24],
+  [*Administración de pagos automáticos*],
+  [Configuración de débitos programados y cobros periódicos automáticos.],
+  [Transacciones],
+
   [CU-25], [*Generación y escaneo de códigos QR*], [Cobros y pagos inmediatos mediante códigos QR.], [Transacciones],
-  [CU-26], [*Gestión de transferencias internacionales*], [Envío y recepción de fondos hacia o desde el exterior.], [Transacciones],
-  [CU-27], [*Pago de facturas de servicios*], [Cancelación de servicios públicos y privados mediante convenios registrados.], [Transacciones],
-  [CU-28], [*Pagos físicos y transacciones presenciales*], [Gestión de cheques y consignaciones en ventanilla o canales físicos.], [Transacciones],
-  [CU-29], [*Soporte para billeteras externas*], [Vinculación de tarjetas a plataformas como Apple Pay o Google Wallet.], [Transacciones],
-  [CU-30], [*Transferencias entre cuentas propias y a terceros*], [Envío de fondos entre cuentas del mismo banco o cuentas interbancarias.], [Transacciones],
+  [CU-26],
+  [*Gestión de transferencias internacionales*],
+  [Envío y recepción de fondos hacia o desde el exterior.],
+  [Transacciones],
+
+  [CU-27],
+  [*Pago de facturas de servicios*],
+  [Cancelación de servicios públicos y privados mediante convenios registrados.],
+  [Transacciones],
+
+  [CU-28],
+  [*Pagos físicos y transacciones presenciales*],
+  [Gestión de cheques y consignaciones en ventanilla o canales físicos.],
+  [Transacciones],
+
+  [CU-29],
+  [*Soporte para billeteras externas*],
+  [Vinculación de tarjetas a plataformas como Apple Pay o Google Wallet.],
+  [Transacciones],
+
+  [CU-30],
+  [*Transferencias entre cuentas propias y a terceros*],
+  [Envío de fondos entre cuentas del mismo banco o cuentas interbancarias.],
+  [Transacciones],
 )
 
 = Modelo de dominio
